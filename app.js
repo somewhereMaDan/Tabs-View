@@ -24,7 +24,7 @@ function displayTextitems(getContent) {
   </div>`
   });
 
-  display = display.join("");
+  display = display.join(""); // we are using "join" to convert the array to a string and using ("") to prevent from breaking the string
   textContainer.innerHTML = display;
 }
 
@@ -52,10 +52,10 @@ Goals.classList.add('open'); // this will initially keep the style on the button
 filterButtons.forEach((btn) => {
   btn.addEventListener('click', (event) => {
     filterButtons.forEach((btn1) => {
-      btn1.classList.add('open'); // remove the class open from all buttons
+      btn1.classList.add('open'); // add the class 'open' in all buttons
     }
     );
-    event.target.classList.remove('open'); // adds 'open' to the clicked button
+    event.target.classList.remove('open'); // remove the 'open' to the clicked button
   });
 });
 
